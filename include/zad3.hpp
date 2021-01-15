@@ -9,6 +9,6 @@ class ArtystaPlusInstrument
 	Artysta a;
 	T i;
 public:
-	ArtystaPlusInstrument(const Artysta& art, const T& b) : art(art), i(b){ }
+	ArtystaPlusInstrument(const Artysta& art_, const T& b_) : art(art_}, i{b_}{ }
 	unsigned koncert() { return i.liczbaUczestnikow(a); }
 };
