@@ -12,16 +12,21 @@ using namespace std;
 
 class Artysta 
 {
-	
 public:
-	Artysta() : pseudo("Anonim"), sluch(0) { }
-	Artysta(const std::string& a, unsigned b) : pseudo(a), sluch(b) {}
-	~Artysta() {};
-	virtual void graj(std::ostream& a) const {a<<pseudo << ": " << sluch;	};
-	const std::string& getPseudonim() const {return pseudo;}
-	unsigned getSluchacze() const {return sluch;}
+    Artysta() : pseudonim{"Anonim"}, l_sluchaczy{0} {}
+    Artysta(const std::string& p_, unsigned l_) : pseudonim{p_}, l_sluchaczy{l_} {}
 
-  private:
-    std::string pseudo;
-	  unsigned sluch;
+    virtual void graj(std::ostream& stream) const
+    {
+
+        stream << pseudonim << ": " << l_sluchaczy;
+    }
+
+    const std::string& getPseudonim() const {return pseudonim;}
+    unsigned getSluchacze() const {return l_sluchaczy;}
+
+
+private:
+    std::string pseudonim;
+    unsigned l_sluchaczy; 
 };
