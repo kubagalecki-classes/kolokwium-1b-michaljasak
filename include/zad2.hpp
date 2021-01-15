@@ -17,7 +17,7 @@ public:
   
 	void graj(std::ostream& a) const override
 	{
-		a << "PopGwiazda: " << this->getPseudonim();
+		a << "PopGwiazda: " << getPseudonim();
 	}
 };
 
@@ -31,7 +31,7 @@ public:
   
 	void graj(std::ostream& a) const override
 	{
-		a << "RapGwiazda: " << this->getPseudonim();
+		a << "RapGwiazda: " << getPseudonim();
 	}
 };
 

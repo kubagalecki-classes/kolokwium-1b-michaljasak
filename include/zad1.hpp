@@ -21,10 +21,10 @@ public:
 	virtual void graj(std::ostream& a) const {a<<pseudo << ": " << sluch;	};
 	const std::string& getPseudonim() const
 	{
-		return this->pseudo;
+		return pseudo;
 	}
 	unsigned getSluchacze() const
 	{
-		return this->sluch;
+		return sluch;
 	}
 };
