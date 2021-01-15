@@ -3,7 +3,7 @@
 #include "zad1.hpp"
 
 //tutaj szablon ArtystaPlusInstrument
-template<class T>
+template<typename T>
 class ArtystaPlusInstrument
 {
 	Artysta a;
