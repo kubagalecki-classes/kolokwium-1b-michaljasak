@@ -15,7 +15,7 @@ public:
 	PopGwiazda(const std::string& a, unsigned b) : pseudo(a), sluch(b) {  };
 	void graj(std::ostream& a) const
 	{
-		a << "RapGwiazda: " << this->pseudo;
+		a << "PopGwiazda: " << this->pseudo;
 	}
 };
 
@@ -29,7 +29,7 @@ public:
 
 	void graj(std::ostream& a) const
 	{
-		a << "PopGwiazda: " << this->pseudo;
+		a << "RapGwiazda: " << this->pseudo;
 	}
 };
 
