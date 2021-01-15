@@ -13,6 +13,14 @@ class PopGwiazda : public Artysta
 public:
 	PopGwiazda() {};
 	PopGwiazda(const std::string& a, unsigned b) : pseudo(a), sluch(b) {  };
+  unsigned getSluchacze() const
+    {
+        return this->sluch;
+    }
+    const std::string& getPseudonim() const
+    {
+        return this->pseudo;
+    }
 	void graj(std::ostream& a) const
 	{
 		a << "PopGwiazda: " << this->pseudo;
@@ -26,7 +34,14 @@ class RapGwiazda : public Artysta
 public:
 	RapGwiazda() {};
 	RapGwiazda(const std::string& a, unsigned b) : pseudo(a), sluch(b) {};
-
+  unsigned getSluchacze() const
+      {
+          return this->sluch;
+      }
+      const std::string& getPseudonim() const
+    {
+        return this->pseudo;
+    }
 	void graj(std::ostream& a) const
 	{
 		a << "RapGwiazda: " << this->pseudo;
