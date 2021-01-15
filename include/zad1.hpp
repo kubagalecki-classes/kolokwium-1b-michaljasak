@@ -18,7 +18,7 @@ public:
 	Artysta() { this->pseudo = "Anonim"; this->sluch = 0; }
 	Artysta(const std::string& a, unsigned b) : pseudo(a), sluch(b) {}
 	void graj(std::ostream& a) const {
-		a << this->pseudo << ": " << this->sluch << endl;
+		a << this->pseudo << ": " << this->sluch;
 	}
 	const std::string& getPseudonim() const
 	{
