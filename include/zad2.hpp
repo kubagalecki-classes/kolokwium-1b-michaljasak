@@ -1,10 +1,30 @@
 #pragma once
 
-#include "zad1.hpp"
+// #include "zad1.hpp"
 
 #include <cctype>
 
 // tutaj klasy PopGwiazda, RapGwiazda oraz funkcja stworzArtyste
+
+class Artysta 
+{
+	string pseudo;
+	unsigned sluch;
+public:
+	Artysta() { this->pseudo = "Anonim"; this->sluch = 0; }
+	Artysta(const std::string& a, unsigned b) : pseudo(a), sluch(b) {}
+	~Artysta() {};
+	virtual void graj(std::ostream& a) const {	};
+	const std::string& getPseudonim() const
+	{
+		return this->pseudo;
+	}
+	unsigned getSluchacze() const
+	{
+		return this->sluch;
+	}
+};
+
 
 class PopGwiazda : public Artysta
 {
@@ -13,17 +33,10 @@ class PopGwiazda : public Artysta
 public:
 	PopGwiazda() {};
 	PopGwiazda(const std::string& a, unsigned b) : pseudo(a), sluch(b) {  };
-  unsigned getSluchacze() const
-    {
-        return this->sluch;
-    }
-    const std::string& getPseudonim() const
-    {
-        return this->pseudo;
-    }
-	void graj(std::ostream& a) const
+  
+	void graj(std::ostream& a) const override
 	{
-		a << "PopGwiazda: " << this->pseudo;
+		a << "PopGwiazda: " << getPseudonim();
 	}
 };
 
@@ -34,17 +47,10 @@ class RapGwiazda : public Artysta
 public:
 	RapGwiazda() {};
 	RapGwiazda(const std::string& a, unsigned b) : pseudo(a), sluch(b) {};
-  unsigned getSluchacze() const
-      {
-          return this->sluch;
-      }
-      const std::string& getPseudonim() const
-    {
-        return this->pseudo;
-    }
-	void graj(std::ostream& a) const
+  
+	void graj(std::ostream& a) const override
 	{
-		a << "RapGwiazda: " << this->pseudo;
+		a << "RapGwiazda: " << getPseudonim();
 	}
 };
 
