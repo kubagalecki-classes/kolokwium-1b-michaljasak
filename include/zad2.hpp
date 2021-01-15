@@ -13,7 +13,7 @@ class PopGwiazda : public Artysta
 	unsigned sluch;
 public:
 	PopGwiazda() {};
-	PopGwiazda(const std::string& a, unsigned b) : pseudo(a), sluch(b) {  };
+	PopGwiazda(const std::string& a, unsigned b) : Artysta(a,b) {  };
   
 	void graj(std::ostream& a) const override
 	{
@@ -27,7 +27,7 @@ class RapGwiazda : public Artysta
 	unsigned sluch;
 public:
 	RapGwiazda() {};
-	RapGwiazda(const std::string& a, unsigned b) : pseudo(a), sluch(b) {};
+	RapGwiazda(const std::string& a, unsigned b) : Artysta(a,b)) {};
   
 	void graj(std::ostream& a) const override
 	{
@@ -37,10 +37,10 @@ public:
 
 Artysta* stworzArtyste(const std::string& a) {
 	if (a.front() == toupper(a.front())) {
-		return new PopGwiazda("BTS", 1234);
+		return new PopGwiazda{"BTS", 1234};
 	}
 	else {
-		return new RapGwiazda("Ye", 4321);
+		return new RapGwiazda{"Ye", 4321};
 	}
 	
 }
