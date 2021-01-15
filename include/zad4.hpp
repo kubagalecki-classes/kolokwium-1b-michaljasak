@@ -4,3 +4,4 @@
 #include <vector>
 
 // tutaj funkcja stworzZespol
+std::vector 
